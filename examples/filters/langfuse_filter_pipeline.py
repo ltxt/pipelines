@@ -110,7 +110,10 @@ class Pipeline:
 
         self.chat_traces[body["chat_id"]] = trace
         self.chat_generations[body["chat_id"]] = generation
+        print(trace.get_trace_url())
 
+        del body["chat_id"]
+        
         return body
 
     async def outlet(self, body: dict, user: Optional[dict] = None) -> dict:
