@@ -1,10 +1,10 @@
 """
-title: Langfuse Filter Pipeline
+title: Langfuse Cloud Filter Pipeline
 author: open-webui
 date: 2024-09-27
 version: 1.4
 license: MIT
-description: A filter pipeline that uses Langfuse.
+description: A filter pipeline that uses Langfuse Cloud.
 requirements: langfuse
 """
 
@@ -34,7 +34,7 @@ class Pipeline:
 
     def __init__(self):
         self.type = "filter"
-        self.name = "Langfuse Filter"
+        self.name = "Langfuse Cloud Filter"
         self.valves = self.Valves(
             **{
                 "pipelines": ["*"],
